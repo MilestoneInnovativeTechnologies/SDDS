@@ -40,7 +40,7 @@ class SDDSServiceProvider extends ServiceProvider
         $path = ($folder ? ("$folder" . DIRECTORY_SEPARATOR) : "") . ($file ? "$file" : '');
         return self::$root . $path;
     }
-    private function publishConfig(){ $this->publishes([self::getRoot('config','sdds.php') => config_path('/')]); }
+    private function publishConfig(){ $this->publishes([self::getRoot('config','sdds.php') => config_path('sdds.php')]); }
     private function loadMigrations(){ $this->loadMigrationsFrom(self::getRoot('migrations')); }
     private function loadViews(){ $this->loadViewsFrom(self::getRoot('views'), 'SDDS'); }
     private function loadRoutes(){ $this->loadRoutesFrom(self::getRoot('routes','web.php')); }
