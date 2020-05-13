@@ -1,0 +1,24 @@
+{
+    "name": "milestone/sdds",
+    "description": "Switch between databases according to the sub domain.",
+    "authors": [
+        {
+            "name": "Milestone Innovative Technologies",
+            "email": "info@milestoneit.net"
+        }
+    ],
+    "require": {
+	},
+    "autoload": {
+        "psr-4": {
+            "Milestone\\SDDS\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Milestone\\SDDS\\SDDSServiceProvider"
+            ]
+        }
+    }
+}
